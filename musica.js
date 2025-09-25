@@ -1,19 +1,26 @@
 /** @format */
-
 const albums = {
   //My album
-  album1: [
+  My_Álbum: [
     /* {
       title: "",
       artist: "",
+      album: "My Album",
       url: "",
-      image:
-        "imagenes/temporal.jpeg",
+      image:"imagenes/temporal.jpeg",
     }, */
+    {
+      title: "Tommee Profitt - Enemy (Sam Tinnesz Beacon Light)",
+      artist: "Tommee Profitt",
+      album: "My Album",
+      url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FEnemy%20-%20Tommee%20Profitt%20Sam%20Tinnesz%20Beacon%20Light.mp3?alt=media&token=8b49905b-178b-4e7c-a7bc-e33fcfd3d843",
+      image:
+        "https://i.pinimg.com/736x/e3/da/a3/e3daa3883674cbec11feb44c3f01afe1.jpg",
+    },
     {
       title: "SPIT IN MY FACE! X GHOSTRIDER (slowed and reverb)",
       artist: "Alwino",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FAlwino%20-%20SPIT%20IN%20MY%20FACE!%20X%20GHOSTRIDER%20(slowed%20and%20reverb).mp3?alt=media&token=6ea6a87f-8967-413e-99d2-5a687758d92a",
       image:
         "https://i.pinimg.com/736x/eb/db/54/ebdb54d87ab5a7a9c826f567eb425051.jpg",
@@ -21,7 +28,7 @@ const albums = {
     {
       title: "Egzod & Maestro Chives - Royalty (ft. Neoni)",
       artist: "Egzod & Maestro Chives",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FEgzod%20%26%20Maestro%20Chives%20-%20Royalty%20(ft.%20Neoni)%20%5BOfficial%20Lyric%20Video%5D.mp3?alt=media&token=1829d5e8-3ba2-4b5f-8e71-1d582b83ff46",
       image:
         "https://i1.sndcdn.com/artworks-DXrZ18rbgBvdZGhM-6SaGEQ-t500x500.jpg",
@@ -29,14 +36,14 @@ const albums = {
     {
       title: "Adele - Skyfall",
       artist: "Adele",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FAdele%20-%20Skyfall%20.mp3?alt=media&token=adbbb1b2-0003-44dd-a4e5-4e88a93b5b90",
       image: "https://i.scdn.co/image/ab67616d0000b2732737be35cc5245eef495be90",
     },
     {
       title: "Nirvana - Something In The Way",
       artist: "Nirvana",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FNirvana%20-%20Something%20In%20The%20Way%20(Audio).mp3?alt=media&token=40a4293a-0567-4c71-9211-1972e1f1ed4d",
       image:
         "https://i.pinimg.com/736x/51/0b/ee/510beebb59e33a485be7ada76870fae6.jpg",
@@ -45,7 +52,7 @@ const albums = {
     {
       title: "Bezos I x Gimme Gimme (TikTok)",
       artist: "katerina",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FBezos%20I%20x%20Gimme%20Gimme%20Gimme%20(TikTok%20Mashup)%20HQ.mp3?alt=media&token=b685a0a7-2d0c-4e0d-b87e-0e44c93189cc",
       image:
         "https://i.pinimg.com/736x/14/e4/42/14e4427b0664d8550d4aea51b754883a.jpg",
@@ -54,7 +61,7 @@ const albums = {
     {
       title: "Meet the frownies x Lovely Bastards",
       artist: "ZWE1HVNDXR",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FMeet%20the%20frownies%20x%20Lovely%20Bastards.mp3?alt=media&token=204e9844-bc69-4032-9d51-0ca8b677324d",
       image:
         "https://i.pinimg.com/236x/1a/b9/ad/1ab9ada29ba018527facd105758a03ec.jpg",
@@ -62,7 +69,7 @@ const albums = {
     {
       title: "Old Town Road (ft. Billy) Ray Cyrus",
       artist: "Lil Nas X",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FLil%20Nas%20X%20-%20Old%20Town%20Road%20(Official%20Video)%20ft.%20Billy%20Ray%20Cyrus.mp3?alt=media&token=c496ebab-4219-47f8-851e-32219000c282",
       image:
         "https://i.pinimg.com/736x/71/1e/a7/711ea7895e11cd5d550f28fcfeba2330.jpg",
@@ -70,7 +77,7 @@ const albums = {
     {
       title: "MGMT - Little Dark Age",
       artist: "MGMT",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FMGMT%20-%20Little%20Dark%20Age.mp3?alt=media&token=1d0b86b7-cf11-4e05-ad71-98b1ad432479",
       image:
         "https://i.pinimg.com/736x/4a/a4/8c/4aa48c4429f9b945424c53c0ee164f4f.jpg",
@@ -78,14 +85,14 @@ const albums = {
     {
       title: "what I've done",
       artist: "Linkin Park",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2Flinkin%20park%20-%20what%20I've%20done%20(lyrics).mp3?alt=media&token=b9a84b97-9911-4934-9ca1-0a915cd0c07e",
       image: "https://i1.sndcdn.com/artworks-000601014187-dkidi9-t500x500.jpg",
     },
     {
       title: "Aftermath",
       artist: "Caravan Palace",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FCaravan%20Palace%20-%20Aftermath%20__%20Sub%20Espa%C3%B1ol%20-%20steven%20fan.mp3?alt=media&token=a41addab-ea90-4911-a1ae-26f59d2db44b",
       image:
         "https://i.pinimg.com/736x/3f/05/25/3f05253ec7cabc2ae909690c17cd694e.jpg",
@@ -93,7 +100,7 @@ const albums = {
     {
       title: "The Rolling Stones",
       artist: "Paint It, Black",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FThe%20Rolling%20Stones%20-%20Paint%20It%2C%20Black%20(Official%20Lyric%20Video)%20-%20ABKCOVEVO.mp3?alt=media&token=1eefd2c7-81b1-4285-8116-6024ea70c676",
       image:
         "https://i.pinimg.com/736x/9e/03/17/9e03178556065707c4598feb9000a2fe.jpg",
@@ -101,7 +108,7 @@ const albums = {
     {
       title: "In The End",
       artist: "Linkin Park",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FIn%20The%20End%20%5BOfficial%20HD%20Music%20Video%5D%20-%20Linkin%20Park.mp3?alt=media&token=89b37eb1-f8c4-44e0-a538-f409679e620b",
       image:
         "https://i1.sndcdn.com/artworks-yMgYpMVWpz8aYhDg-1ob3AA-t500x500.jpg",
@@ -110,7 +117,7 @@ const albums = {
     {
       title: "Post Malone, Swae Lee - Sunflower",
       artist: "Post Malone",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FPost%20Malone%2C%20Swae%20Lee%20-%20Sunflower%20(Spider-Man%20Into%20the%20Spider-Verse).mp3?alt=media",
       image:
         "https://i1.sndcdn.com/artworks-C9Iaa8IBy9cQ064Y-VsPIHg-t500x500.jpg",
@@ -118,7 +125,7 @@ const albums = {
     {
       title: "Am I Dreaming",
       artist: "Metro Boomin, AAP Rocky, Roisee",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FAm%20I%20Dreaming%20_%20Spider-Verse%20Soundtrack%20_%20Metro%20Boomin%2C%20AAP%20Rocky%2C%20Roisee%20_%20Sub%20Espa%C3%B1ol%20_%20Credits%20_%20-%20Syndornx.mp3?alt=media",
       image:
         "https://i.pinimg.com/736x/5e/c7/d0/5ec7d08a7ff643d6120dc869726e63df.jpg",
@@ -127,7 +134,7 @@ const albums = {
     {
       title: "Eminem - Venom",
       artist: "Eminem",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FEminem%20-%20Venom(Official%20Audio)%20-%20ch3vu.mp3?alt=media&token=7d3b2ed6-701a-4fb1-8efe-c76c077cad38",
       image:
         "https://i.pinimg.com/736x/df/5d/15/df5d1530129f004c62b79951f020f8cd.jpg",
@@ -135,21 +142,21 @@ const albums = {
     {
       title: "Last One Standing",
       artist: "Skylar Grey, Polo G, Mozzy, Eminem",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FSkylar%20Grey%2C%20Polo%20G%2C%20Mozzy%2C%20Eminem%20-%20Last%20One%20Standing%20(Lyric%20Video)%20-%20EminemVEVO.mp3?alt=media",
       image: "https://i.scdn.co/image/ab67616d0000b27318b2c39fa740e2822d40d65b",
     },
     {
       title: "I've Grown (After Dark)",
       artist: "I am ASH",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FI've%20Grown%20From%20A%20Man%20To%20A%20God%20(After%20Dark)%20(Music%20Visualizer).mp3?alt=media&token=55b877b9-3e63-40b9-9c8d-089bba61cbe4",
       image: "https://i.scdn.co/image/ab67616d0000b2735da65dad4f031f51663ee444",
     },
     {
       title: "The Neighbourhood - Sweater Weather",
       artist: "The Neighbourhood",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://colega-20.github.io/proyec/Musica/The%20Neighbourhood%20-%20Sweater%20Weather.mp3",
       image:
         "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2F6%2F6c%2FSweater_Weather_(The_Neighborhood_single_cover).jpg&f=1&nofb=1&ipt=8cbb74a3f958b28b95240635dd636c47c167ea853edbbf3cd6e3ca9ec8767dcb&ipo=images",
@@ -157,7 +164,7 @@ const albums = {
     {
       title: "Sweater Weather x After Dark",
       artist: "Renzhoo",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FMr.%20Kitty%2C%20The%20Neighbourhood%20-%20After%20Dark%20X%20Sweater%20Weather%20(TikTok%20Mashup)%20%5BLyrics%5D%20-%20Blissful%20Mind.mp3?alt=media",
       image:
         "https://ideogram.ai/assets/progressive-image/balanced/response/yR5vZY9nSimvJkXOyb0COg",
@@ -165,7 +172,7 @@ const albums = {
     {
       title: "Mr.Kitty - After Dark",
       artist: "Mr.Kitty",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FMr.Kitty%20-%20After%20Dark%20-%20Mr.Kitty%20Official.mp3?alt=media",
       image:
         "https://ideogram.ai/assets/image/lossless/response/UjdJ6aLIQrO2CT5msh22zg",
@@ -173,14 +180,14 @@ const albums = {
     {
       title: "Wellerman (Sea Shanty)",
       artist: "Nathan Evans",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FNathan%20Evans%20-%20Wellerman%20(Sea%20Shanty).mp3?alt=media&token=8aad8ae1-c21b-4c4c-b0d5-bbe2352acb81",
       image: "https://i.scdn.co/image/ab67616d0000b273db24f6590f4ad36048076521",
     },
     {
       title: "X Gon' Give It To Ya",
       artist: "Multifandom",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FDMX%20-%20X%20Gon'%20Give%20It%20to%20Ya%20(Original)%20_%20Deadpool%20OST%20-%20Save%20The%20Lost%20Music.mp3?alt=media",
       image:
         "https://i.pinimg.com/736x/6b/d9/c5/6bd9c5e31777e6772c57de7c3e46f27a.jpg",
@@ -188,7 +195,7 @@ const albums = {
     {
       title: "Way Down We Go",
       artist: "KALEO",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FKALEO%20-%20Way%20Down%20We%20Go.mp3?alt=media&token=d7136d3c-ff9b-4ffa-a0f2-01cd86dbf69a",
       image:
         "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/19002d30-5808-433a-9b82-947570852a5d/dgb5nfq-7dd9eae0-63c8-49dc-81b1-fe3595e893d5.jpg/v1/fill/w_894,h_894,q_70,strp/samurai_vaporwave_aesthetic_by_pixl141_dgb5nfq-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzE5MDAyZDMwLTU4MDgtNDMzYS05YjgyLTk0NzU3MDg1MmE1ZFwvZGdiNW5mcS03ZGQ5ZWFlMC02M2M4LTQ5ZGMtODFiMS1mZTM1OTVlODkzZDUuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.cyT6voa-q51-0e8H3qDVl3qJ4X1vMEOU2U9MFMhWPeM",
@@ -196,7 +203,7 @@ const albums = {
     {
       title: "Gangsta's Paradise",
       artist: "Coolio",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://colega-20.github.io/proyec/Musica/gangstas-paradise.mp3",
       image:
         "https://ideogram.ai/assets/image/lossless/response/OAS-fc9ERN2TD6H3LWXDsw",
@@ -204,7 +211,7 @@ const albums = {
     {
       title: "David Guetta - Hey Mama (ERS REMIX)",
       artist: "David Guetta",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FDavid%20Guetta%20-%20Hey%20Mama%20(ERS%20REMIX)%20.mp3?alt=media",
       image:
         "https://i.pinimg.com/736x/9f/90/46/9f9046d027629f4672d898878400482c.jpg",
@@ -212,7 +219,7 @@ const albums = {
     {
       title: "Ainsi bas la vida",
       artist: "Indila",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://colega-20.github.io/proyec/Musica/ainsi-bas-la-vida-full-version.mp3",
       image:
         "https://i.pinimg.com/736x/4f/26/75/4f26753050593ed873b9be73e5b709ab.jpg",
@@ -220,7 +227,7 @@ const albums = {
     {
       title: "Let It Die (ft. Philip Strand)",
       artist: "Rival",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FRival%20-%20Let%20It%20Die%20(ft.%20Philip%20Strand)%20%5BOfficial%20Lyric%20Video%5D%20-%20Rival.mp3?alt=media",
       image:
         "https://i.pinimg.com/736x/89/61/69/8961698b1238825eb61572ad9c4cd832.jpg",
@@ -228,7 +235,7 @@ const albums = {
     {
       title: "Bonly stay with me",
       artist: "Zeta Z",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://colega-20.github.io/proyec/Musica/nonly-stay-with-me.mp3",
       image:
         "https://i.pinimg.com/736x/8b/20/b8/8b20b81da70fc92aa042dd18bdf5147a.jpg",
@@ -236,7 +243,7 @@ const albums = {
     {
       title: "Sweet Dreams",
       artist: "Eurythmics, Annie Lennox, Dave Stewart",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FEurythmics%2C%20Annie%20Lennox%2C%20Dave%20Stewart%20-%20Sweet%20Dreams%20(Are%20Made%20Of%20This)%20(Official%20Video).mp3?alt=media&token=f51cb1c6-a261-4ca5-b58a-e07370f9031f",
       image:
         "https://i.pinimg.com/736x/56/bf/4f/56bf4f69a40cf5cfcf7a44a5f4c81972.jpg",
@@ -244,13 +251,13 @@ const albums = {
     {
       title: "BABYDOLL SPEED",
       artist: "Ari Abdul",
-      album: "(My Album)",
+      album: "My Album",
       url: "https://colega-20.github.io/proyec/Musica/BABYDOLL%20SPEED.mp3",
       image:
         "https://i.pinimg.com/736x/66/ba/38/66ba385c5aa7b1edad94dc66e9c53b92.jpg",
     },
   ],
-  //pasiva
+  //Pasiva
   pasivo: [
     /*{
       title: "",
@@ -262,15 +269,23 @@ const albums = {
     {
       title: "Beanie (Slowed)",
       artist: "Chezile",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FBeanie%20(Slowed).mp3?alt=media&token=8c095f88-50e0-4b2c-8692-1d6c07e71a72",
       image:
         "https://i.pinimg.com/736x/bb/41/f7/bb41f7c39c240ecf95472413cd6de184.jpg",
     },
-
+    {
+      title: "Akon - Lonely {BASS BOOSTED}",
+      artist: "Akon",
+      album: "Pasiva",
+      url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FAkon%20-%20Lonely%20%7BBASS%20BOOSTED%7D.mp3?alt=media&token=4fb4c9b3-8656-4017-aa81-0dff7a1baa74",
+      image:
+        "https://i.pinimg.com/originals/e4/f7/24/e4f724d59b707ebf5ff1c86892abb0c6.jpg",
+    },
     {
       title: "Someone To You (feat. Shalom Margaret)",
       artist: "Fasetya",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FFasetya%20-%20Someone%20To%20You%20(feat.%20Shalom%20Margaret).mp3?alt=media&token=76e754b9-d056-4483-a44f-f8a0c71634b3",
       image:
         "https://i.pinimg.com/736x/e9/7d/ef/e97def91ca1841c615c7fb8c53906a54.jpg",
@@ -278,7 +293,7 @@ const albums = {
     {
       title: "the one that got away (Gustixa Remix)",
       artist: "Gustixa",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2Fthe%20one%20that%20got%20away%20(Gustixa%20Remix).mp3?alt=media&token=9004a5a1-e062-446e-94d9-8fe5f69f662a",
       image:
         "https://i.pinimg.com/736x/f5/b9/e4/f5b9e4d4e26b85941377930aafa58145.jpg",
@@ -286,14 +301,14 @@ const albums = {
     {
       title: "See You Again ft. Charlie Puth",
       artist: "Wiz Khalifa",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FWiz%20Khalifa%20-%20See%20You%20Again%20ft.%20Charlie%20Puth.mp3?alt=media&token=9e56b5f0-b05b-485a-8497-cd652b96c1a6",
       image: "https://i1.sndcdn.com/artworks-000112918851-wrohig-t500x500.jpg",
     },
     {
       title: "Lukas Graham - 7 Years",
       artist: "Lukas Graham",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FLukas%20Graham%20-%207%20Years%20(Lyrics).mp3?alt=media&token=3f15a895-bd93-42ff-bb17-ead37fd6645a",
       image:
         "https://i.pinimg.com/736x/db/0d/39/db0d39b14c05077746ff90deb712faec.jpg",
@@ -301,15 +316,23 @@ const albums = {
     {
       title: "M.T - Hoffnungslos",
       artist: "M.T",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FM.T%20-%20Hoffnungslos.mp3?alt=media&token=459f3529-1cf6-4fad-a18a-b43b69b7fc51",
       image:
         "https://i.pinimg.com/736x/cc/8f/ac/cc8fac9c1d0896d01458497d619e3884.jpg",
     },
     {
+      title: "Cry - Cigarettes After Sex",
+      artist: "Cigarettes After Sex",
+      album: "Pasiva",
+      url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FCry%20-%20Cigarettes%20After%20Sex.mp3?alt=media&token=57dc6845-6a20-481e-bf40-819ae6127645",
+      image:
+        "https://i.pinimg.com/originals/f9/3c/fe/f93cfe14821d44e1174b4fcf62bfea38.jpg",
+    },
+    {
       title: "Surf Curse - Freaks",
       artist: "Surf Curse",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FSurf%20Curse%20-%20Freaks%20(LYRICS)%20%E2%80%9CI%20dream%20of%20you%20almost%20every%20night%20hopefully%20I%20won't%20wake%E2%80%9D.mp3?alt=media&token=88da6558-7fd0-450e-9624-460164445ba5",
       image:
         "https://i.pinimg.com/736x/8b/5c/8c/8b5c8c54e2094050c0d7afeab5aa3b71.jpg",
@@ -317,7 +340,7 @@ const albums = {
     {
       title: "Death Bed Coffee For Your Head",
       artist: "Powfu",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://colega-20.github.io/proyec/Musica/powfu-death-bed-coffee-for-your-head-official-video-ft-beabadoobee.mp3",
       image:
         "https://i.pinimg.com/736x/fa/06/30/fa0630524c192c346e6e384da291b3c5.jpg",
@@ -325,7 +348,7 @@ const albums = {
     {
       title: "It Won't Hurt",
       artist: "Dwight Yoakam",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://colega-20.github.io/proyec/Musica/it-wont-hurt.mp3",
       image:
         "https://i.pinimg.com/736x/fd/6e/ff/fd6efffc24d1d139d6ee6075d5ef8bf1.jpg",
@@ -333,7 +356,7 @@ const albums = {
     {
       title: "Television Blonde - Freaks",
       artist: "Television Blonde",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FFreaks%20-%20Television%20Blonde%20.mp3?alt=media&token=7df1f3a7-ddc7-46fb-9f5e-cbb773fc5df2",
       image:
         "https://i.pinimg.com/736x/8a/24/42/8a2442d4635f3d9384480825c25d0f09.jpg",
@@ -341,7 +364,7 @@ const albums = {
     {
       title: "The Rare Occasions Notion",
       artist: "Blissful Mind",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://colega-20.github.io/proyec/Musica/the-rare-occasions-notion-lyrics.mp3",
       image:
         "https://i.pinimg.com/736x/b2/66/2e/b2662e1df5a54661477562d25d14b3ad.jpg",
@@ -349,7 +372,7 @@ const albums = {
     {
       title: "I Love You So - The Waltersn",
       artist: "The Waltersn",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FI%20Love%20You%20So%20-%20The%20Walters.mp3?alt=media&token=4b7720ff-2c8d-4e7d-bd31-635ea9a06c0d",
       image:
         "https://i.pinimg.com/736x/6d/36/92/6d36923034f81f4397d6aca48554a806.jpg",
@@ -357,7 +380,7 @@ const albums = {
     {
       title: "Tom Odell - Another Love",
       artist: "Tom Odell",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FTom%20Odell%20-%20Another%20Love%20.mp3?alt=media&token=7a2e31ae-a7e0-4636-9a6a-341401c1bd85",
       image:
         "https://i.pinimg.com/736x/26/88/82/268882bc08315bdaad2816515e639b03.jpg",
@@ -365,7 +388,7 @@ const albums = {
     {
       title: "Your love is my drug",
       artist: "Etxrnall",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://colega-20.github.io/proyec/Musica/etxrnall-your-love-is-my-drug-8bit-slowed.mp3",
       image:
         "https://i.pinimg.com/736x/8c/32/ff/8c32ff0b25c4ddbca805b01a6fe36ed1.jpg",
@@ -373,7 +396,7 @@ const albums = {
     {
       title: "your love is my drug ｜slowed & reverb(+rain)",
       artist: "Boa₊⊹",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2Fyour%20love%20is%20my%20drug%20%EF%BD%9Cslowed%20%26%20reverb(%2Brain).mp3?alt=media&token=7b0d5e5f-6638-4773-8c04-feca53cd845c",
       image:
         "https://i.pinimg.com/736x/13/cd/25/13cd250ff992659df9e3698a3b8de5c1.jpg",
@@ -381,7 +404,7 @@ const albums = {
     {
       title: "Blackbear Idfc Acoustic",
       artist: "StrictlyHits",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://colega-20.github.io/proyec/Musica/blackbear-idfc-acoustic-official-version.mp3",
       image:
         "https://i.pinimg.com/736x/2e/0f/fd/2e0ffdb7232c5367d7266890186ff04a.jpg",
@@ -389,7 +412,7 @@ const albums = {
     {
       title: "I m Only A Fool For You (IDFC)",
       artist: "BlackBear ",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FI%20m%20Only%20A%20Fool%20For%20You%20BlackBear%20IDFC%20Acoustic%20Audio.mp3?alt=media&token=0bc6dc5c-f547-47f5-8208-e5794f6fcdda",
       image:
         "https://i.pinimg.com/736x/02/f4/2a/02f42accf73b325989c38331c55f5884.jpg",
@@ -398,15 +421,23 @@ const albums = {
     {
       title: "In This Shirt",
       artist: "The Irrepressibles",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://colega-20.github.io/proyec/Musica/esta-cancion-te-hara-sentir-vivo.mp3",
       image:
         "https://i.pinimg.com/736x/1e/7a/c4/1e7ac4db496fd65ac0eef07a461f067a.jpg",
     },
     {
+      title: "A Thousand Years x A Thousand Years | TIKTOK VERSION - REVERB",
+      artist: "Rrs",
+      album: "Pasiva",
+      url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FA%20Thousand%20Years%20x%20A%20Thousand%20Years%20%EF%BD%9C%20TIKTOK%20VERSION%20-%20REVERB.mp3?alt=media&token=e3b2a305-dbc3-48d0-9517-269206908424",
+      image:
+        "https://i.pinimg.com/736x/56/cd/58/56cd5867e0cd93d7422dba6f05fd8027.jpg",
+    },
+    {
       title: "Can We Kiss Foreve",
       artist: "Kina",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://colega-20.github.io/proyec/Musica/can-we-kiss-forever.mp3",
       image:
         "https://i.pinimg.com/736x/64/85/aa/6485aac256caa44291ec3b4a57abb34b.jpg",
@@ -414,7 +445,7 @@ const albums = {
     {
       title: "In The End [Mellen Gi Remix] feat. Fleurie",
       artist: "Tommee Profitt",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FLinkin%20Park%20-%20In%20The%20End%20(Mellen%20Gi%20%26%20Tommee%20Profitt%20Remix).mp3?alt=media&token=85787cbe-0ea6-4165-805c-f8cac784a843",
       image:
         "https://i.pinimg.com/736x/9f/4f/f3/9f4ff34169ed063429b19ee1e7f5740a.jpg",
@@ -422,14 +453,14 @@ const albums = {
     {
       title: "ROADS UNTRAVELED (LIVING THINGS)",
       artist: "Linkin Park",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FROADS%20UNTRAVELED%20-%20Linkin%20Park%20(LIVING%20THINGS)%20-%20Linkin%20Park.mp3?alt=media",
       image: "https://i1.sndcdn.com/artworks-000085817555-04n8fr-t500x500.jpg",
     },
     {
       title: "GHOST - WASTE",
       artist: "KXLLSWXTCH",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FGHOST%20-%20WASTE.mp3?alt=media&token=d3f7fec6-477d-4f6c-9e2e-b66c814a424f",
       image:
         "https://i1.sndcdn.com/artworks-Gt0OCHSbfU4CnDBj-92j4zw-t500x500.jpg",
@@ -437,7 +468,7 @@ const albums = {
     {
       title: "Let Me Down Slowly",
       artist: "Alec Benjamin",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FAlec%20Benjamin%20Let%20Me%20Down%20Slowly%20Official%20Music%20Video.mp3?alt=media",
       image:
         "https://i.pinimg.com/736x/2d/82/1c/2d821c2b43ba487c83d5e31a652d30e9.jpg",
@@ -445,14 +476,14 @@ const albums = {
     {
       title: "somewhere only we know",
       artist: "Gustixa & Rhianne",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://colega-20.github.io/proyec/Musica/somewhere%20only%20we%20know%20(Gustixa%20&%20Rhianne).mp3",
       image: "https://i.scdn.co/image/ab67616d0000b273fcb46f3682ef58c57ecb99b0",
     },
     {
       title: "Rufi-o - Oblivion ft. Lily Potter",
       artist: "Oblivion Y Lily Potter",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://colega-20.github.io/proyec/Musica/Rufi-o%20-%20Oblivion%20(Lyrics)%20ft.%20Lily%20Potter.mp3",
       image:
         "https://i.pinimg.com/736x/1e/d2/dd/1ed2dd73ce79536e410eca67708af10a.jpg",
@@ -460,7 +491,7 @@ const albums = {
     {
       title: "Oceans (Shalom Margaret Cover) - Lofi Remix",
       artist: "Shalommargaret",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://colega-20.github.io/proyec/Musica/Oceans%20(Shalom%20Margaret%20Cover)%20-%20Lofi%20Remix.mp3?alt=media",
       image:
         "https://ideogram.ai/assets/progressive-image/balanced/response/UNxlsUOdQ32hwvKi6M5wfQ",
@@ -468,7 +499,7 @@ const albums = {
     {
       title: "Lovely - Billie Eilish (Slowed Reverb)",
       artist: "ft. khalid",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://colega-20.github.io/proyec/Musica/lovely%20billie%20eilish%20ft.%20khalid%20slowed.mp3",
       image:
         "https://i.pinimg.com/736x/30/d3/d5/30d3d572270a9cb9128e7d4358ac2e38.jpg",
@@ -476,7 +507,7 @@ const albums = {
     {
       title: "AURORA - Runaway",
       artist: "AURORA",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://colega-20.github.io/proyec/Musica/AURORA%20Runaway%20Tik%20Tok%20Fan%20Edition.mp3",
       image:
         "https://i.pinimg.com/736x/68/a3/f0/68a3f010095306c56ee3dbe50b800dda.jpg",
@@ -484,7 +515,7 @@ const albums = {
     {
       title: "I REALLY WANT TO STAY AT YOUR HOUSE",
       artist: "ROSA WALTON",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FROSA%20WALTON%20%26%20HALLIE%20COGGINS%20-%20I%20REALLY%20WANT%20TO%20STAY%20AT%20YOUR%20HOUSE%20(LYRIC)%20AMV%20CYBERPUNK%20EDGERUNNERS.mp3?alt=media&token=03a79d5e-5f4e-4b7f-8777-e4e2a4f2583f",
       image:
         "https://i.pinimg.com/736x/2d/63/ff/2d63ff499929f0ef2c100709930ddcb3.jpg",
@@ -492,7 +523,7 @@ const albums = {
     {
       title: "Mild High Club - Homage Proved Records",
       artist: "Proved Records",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FMild%20High%20Club%20-%20Homage%20Proved%20Records.mp3?alt=media&token=33df1788-2763-4b9d-ad1e-ce5ae9f08a2f",
       image:
         "https://i.pinimg.com/736x/68/7e/c6/687ec677b1df76445be2e256e07be309.jpg",
@@ -500,7 +531,7 @@ const albums = {
     {
       title: "Sapientdream Past lives",
       artist: "Dulco",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://colega-20.github.io/proyec/Musica/sapientdream-past-lives-subtitulada-espanol.mp3",
       image:
         "https://i.pinimg.com/736x/d1/af/3a/d1af3a33f37066d8fd6c4f5f8dc18ed4.jpg",
@@ -508,7 +539,7 @@ const albums = {
     {
       title: "Past lives Slowed Reverb",
       artist: "Slowed To Perfection",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://colega-20.github.io/proyec/Musica/sapientdream-pastlives-slowed-reverb.mp3",
       image:
         "https://i.pinimg.com/736x/64/87/d0/6487d08e7e7438dfd02ebddffea5665e.jpg",
@@ -516,7 +547,7 @@ const albums = {
     {
       title: "Borns Pastlives Instrumental",
       artist: "By Martin Arteta Tv",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://colega-20.github.io/proyec/Musica/borns-past-lives-instrumental-by-martin-arteta-tv.mp3",
       image:
         "https://i.pinimg.com/736x/d0/ce/65/d0ce657c78a447427f123096b2767b90.jpg",
@@ -525,7 +556,7 @@ const albums = {
     {
       title: "Kina - Get You The Moon",
       artist: "Kina",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://colega-20.github.io/proyec/Musica/Kina%20%20Nobody%20Cares%20ft%20Shiloh.mp3",
       image:
         "https://i.pinimg.com/736x/aa/6a/04/aa6a04420a2301747e6c66c11b467eca.jpg",
@@ -534,7 +565,7 @@ const albums = {
     {
       title: "Kina, Mark Johns, Neenyo - U Not There",
       artist: "Kina",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FKina%2C%20Mark%20Johns%2C%20Neenyo%20-%20U%20Not%20There%20(Visualizer)%20ft.%20Mark%20Johns.mp3?alt=media&token=45a7a2d0-310b-4fd6-8e57-e381c687de16",
       image:
         "https://i.pinimg.com/736x/b5/e7/78/b5e7785b56c2fe0463f1a39906afdfbc.jpg",
@@ -543,7 +574,7 @@ const albums = {
     {
       title: "ive changed for you (ft. Madson Project.)",
       artist: "Kina",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FKina%20-%20ive%20changed%20for%20you%20(feat.%20Madson%20Project.).mp3?alt=media&token=1d644cc7-7d5a-4f3e-afe0-419e92aeddb4",
       image:
         "https://i.pinimg.com/736x/08/88/93/0888931d0e70357c66529fc259e7345a.jpg",
@@ -551,7 +582,7 @@ const albums = {
     {
       title: "Kina - baby youre worth it",
       artist: "Kina",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FKina%20-%20baby%20youre%20worth%20it.mp3?alt=media&token=dd7e9ff1-40b2-4fd6-98f7-5739997224b9",
       image:
         "https://i.pinimg.com/736x/2e/d3/a0/2ed3a085a26bfeeb9df218188ccafb2b.jpg",
@@ -559,7 +590,7 @@ const albums = {
     {
       title: "ure mine (ft. shiloh) [Prod. Kina]",
       artist: "Kina",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2Fure%20mine%20(ft.%20shiloh)%20%5BProd.%20Kina%5D.mp3?alt=media&token=e7de1fc6-12e1-4beb-a5ce-443b717708d3",
       image:
         "https://i.pinimg.com/736x/32/bf/ca/32bfcaa267cc137032a59ab036d1c2e3.jpg",
@@ -568,7 +599,7 @@ const albums = {
     {
       title: "Kina - Nobody Cares",
       artist: "Kina",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://colega-20.github.io/proyec/Musica/Kina%20%20Nobody%20Cares%20ft%20Shiloh.mp3",
       image:
         "https://cdn.leonardo.ai/users/c29776b1-80e9-49cf-98bc-bd95339b5d7a/generations/48f55a9d-29d2-40f5-a872-7010aaa5d1d3/Default_your_love_is_my_drug_liminal_spacewith_rain_with_bla_2.jpg",
@@ -576,7 +607,7 @@ const albums = {
     {
       title: "Girl Come Trougth  - (Slowed)",
       artist: "Shiloh Dynasty",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FGirl%20Come%20Trougth%20%20-%20(Slowed).mp3?alt=media&token=0f9f7f22-d3ff-4c00-9bf1-9a245c11cfac",
       image:
         "https://i.pinimg.com/originals/e4/f7/24/e4f724d59b707ebf5ff1c86892abb0c6.jpg",
@@ -584,7 +615,7 @@ const albums = {
     {
       title: "Dido - Thank You",
       artist: "Dido",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://colega-20.github.io/proyec/Musica/Dido%20thank%20you%20slowed.mp3",
       image:
         "https://i.pinimg.com/736x/62/c6/ec/62c6ecb1dfdeb87ef4b2164db35d59dc.jpg",
@@ -592,7 +623,7 @@ const albums = {
     {
       title: "dv4 - Romantic Homicide",
       artist: "dv4",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2Fdv4%20romantic%20homicide.mp3?alt=media&token=0d8dd823-8259-401a-8cf7-550b3c5be731",
       image:
         "https://i.pinimg.com/736x/57/b2/42/57b242a3615863000ba724a2d8a38548.jpg",
@@ -600,7 +631,7 @@ const albums = {
     {
       title: "The Night We Met",
       artist: "Lord Huron",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FThe%20Night%20We%20Met.mp3?alt=media",
       image:
         "https://i.pinimg.com/736x/9f/b7/e5/9fb7e583d99d7ac4fba071555a2ccaee.jpg",
@@ -608,7 +639,7 @@ const albums = {
     {
       title: "Kevin Kaarl - Vamonos a Marte",
       artist: "Kevin Kaarl",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FVamos%20a%20Marte.mp3?alt=media",
       image:
         "https://cdn.leonardo.ai/users/c29776b1-80e9-49cf-98bc-bd95339b5d7a/generations/8ee9c91a-5731-487f-91b5-5df6d93b42b8/Default_planet_marte_1.jpg",
@@ -616,7 +647,7 @@ const albums = {
     {
       title: "Kevin Kaarl - San Lucas",
       artist: "Kevin Kaarl",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FKevin%20Kaarl%20-%20San%20Lucas.mp3?alt=media",
       image:
         "https://ideogram.ai/assets/image/lossless/response/sHX_bxUWTQm7ajV-TUWfjw",
@@ -624,7 +655,7 @@ const albums = {
     {
       title: "Kevin Kaarl - Colapso",
       artist: "Kevin Kaarl",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FKevin%20Kaarl%20-%20Colapso.mp3?alt=media&token=0870340b-7fbe-4f24-a9f8-5a4055c829c4",
       image:
         "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3be8fb7d-5a6c-4f22-b44a-615bc9cb3909/dhsbrkg-3ac56a72-0ab0-4f9d-97f0-7c76eb7c17a5.jpg/v1/fill/w_894,h_894,q_70,strp/stunning_ai_artwork_by_xaynagelast_dhsbrkg-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzNiZThmYjdkLTVhNmMtNGYyMi1iNDRhLTYxNWJjOWNiMzkwOVwvZGhzYnJrZy0zYWM1NmE3Mi0wYWIwLTRmOWQtOTdmMC03Yzc2ZWI3YzE3YTUuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.o5ditSINkr8jOeaFhR7XfAxAGqa_0vJ5isZA1aXZFsw",
@@ -632,7 +663,7 @@ const albums = {
     {
       title: "David Kushner - Daylight",
       artist: "David Kushner",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FDavid%20Kushner%20-%20Daylight.mp3?alt=media&token=3713a8bd-5869-4f41-8e42-5df57ac05f06",
       image:
         "https://ideogram.ai/assets/progressive-image/balanced/response/viSUmL1-SVGMXymb5IJpWA",
@@ -640,7 +671,7 @@ const albums = {
     {
       title: "This Side of Paradise",
       artist: "Coyote Theory",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FCoyote%20Theory%20-%20This%20Side%20of%20Paradise%20.mp3?alt=media&token=8a0b6bbc-50f9-487b-bc14-72992d8988f1",
       image:
         "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9c84c73f-de91-4f7f-89b3-6d33034c74ac/dhrda9o-9399bbc3-9c7d-4fea-8b27-6ed0b40d259a.jpg/v1/fill/w_250,h_250,q_70,strp/slowed_to_perfection_by_batman_12_dhrda9o-250t.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzljODRjNzNmLWRlOTEtNGY3Zi04OWIzLTZkMzMwMzRjNzRhY1wvZGhyZGE5by05Mzk5YmJjMy05YzdkLTRmZWEtOGIyNy02ZWQwYjQwZDI1OWEuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.sunObMcapxT04SJbKpEmyZyYUw080Q_kmLzrzEIU1v4",
@@ -648,7 +679,7 @@ const albums = {
     {
       title: "Issam alnajjar hadal ahbek",
       artist: "IssamAlnajjarVEVO",
-      album: "pasiva",
+      album: "Pasiva",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2Fissam%20alnajjar%20hadal%20ahbek.mp3?alt=media",
       image:
         "https://i.pinimg.com/736x/96/90/9b/96909ba386b4163542b0cd13486364fc.jpg",
@@ -740,6 +771,7 @@ const albums = {
     {
       title: "Delinquent Habits Return of the Tres - Instrumental slowed",
       artist: "Parsaz Beat",
+      album: "Fondo",
       url: "https://colega-20.github.io/proyec/Musica/Delinquent%20Habits%20Return%20of%20the%20Tres%20Instrumental%20slowed.mp3",
       image:
         "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2Fa9%2Fa2%2F6f%2Fa9a26f50975fdb76eda3edf9a2875b61.jpg&f=1&nofb=1&ipt=cfdf263e83402fa40c45ea2023010c3007109dd0e90e6287d05d1cfd243ca324&ipo=images",
@@ -1036,8 +1068,8 @@ const albums = {
         "https://i.pinimg.com/736x/67/8a/5d/678a5db920a7faa44193f409e0e82a79.jpg",
     },
     {
-      title: "Thousand Foot Krutch",
-      artist: "Courtesy Call",
+      title: "Thousand Foot Krutch - Courtesy Call",
+      artist: "Thousand Foot Krutch",
       album: "Epicas/Competitivas",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FCourtesy%20Call%20-%20Thousand%20Foot%20Krutch.mp3?alt=media&token=c403224d-f974-462b-abbd-2d97ccfbcbaf",
       image:
@@ -1050,6 +1082,22 @@ const albums = {
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FNumb%20(Official%20Music%20Video)%20%5B4K%20UPGRADE%5D%20%E2%80%93%20Linkin%20Park.mp3?alt=media&token=7087bf77-b0f8-4a22-b50f-931f2c7a0074",
       image:
         "https://i.pinimg.com/736x/58/b6/3b/58b63b3781a5364004a24871f5c8d2fb.jpg",
+    },
+    {
+      title: "Thousand Foot Krutch - War of Change",
+      artist: "Thousand Foot Krutch",
+      album: "Epicas/Competitivas",
+      url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FThousand%20Foot%20Krutch%20-%20War%20of%20Change.mp3?alt=media&token=906314f8-ae7c-4959-b907-327abe047edf",
+      image:
+        "https://i.pinimg.com/236x/60/ce/b1/60ceb1d4813f8520b626811a15d871d7.jpg",
+    },
+    {
+      title: "Dope Band - My Funeral",
+      artist: "Dope Band (Official)",
+      album: "Epicas/Competitivas",
+      url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FMy%20Funeral.mp3?alt=media&token=949529ac-e0fa-4a00-b5ea-9bbc0a981310",
+      image:
+        "https://i.pinimg.com/236x/55/be/2a/55be2aae636efc6b7b332527a5604349.jpg",
     },
     {
       title: "Centuries - Fall Out Boy",
@@ -1845,6 +1893,23 @@ const albums = {
         "https://i.pinimg.com/736x/10/30/4a/10304ad5baeea0b69a3bb440df2fef36.jpg",
     },
     {
+      title: "Lullaby Of A Deadman - (elena siegman)",
+      artist: "kevin sherwood",
+      album: "Incosistentes",
+      url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FLullaby%20Of%20A%20Deadman.mp3?alt=media&token=5cf07378-ce37-48df-a269-57e2fcf2a6e8",
+      image:
+        "https://tse3.mm.bing.net/th/id/OIP.HOVixyEGzcG1O2qr_gVLygHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+      // "https://steamuserimages-a.akamaihd.net/ugc/835826279404021820/D35E5F16514AFB4F8AA8CAA36528140B17F4ED17/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+    },
+    {
+      title: "Dead Again ＂Der Eisendrache＂ Black Ops 3",
+      artist: "Elena Siegman",
+      album: "Incosistentes",
+      url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FDead%20Again%20%20Elena%20Siegman%EF%BC%82Der%20Eisendrache%EF%BC%82%20Black%20Ops%203.mp3?alt=media&token=d6925c4b-c9ea-4ee5-a27c-38008ee9e3ba",
+      image:
+        "https://i.pinimg.com/236x/7e/cd/2b/7ecd2b14bce5a556a8bea6427febae1a.jpg",
+    },
+    {
       title: "MidKnyte - Metal [TikTok Mashup]",
       artist: "MidKnyte",
       album: "Incosistentes",
@@ -1926,6 +1991,22 @@ const albums = {
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2Fcalvin_harris.mp3?alt=media&token=0fe3c042-e241-4924-841c-b9b104b5aebe",
       image:
         "https://i.pinimg.com/736x/e1/15/12/e1151299bc12755c68b2f807a92c7262.jpg",
+    },
+    {
+      title: "christina perri - jar of hearts",
+      artist: "Christina Perri",
+      album: "Pop antiguo",
+      url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2Fchristina%20perri%20-%20jar%20of%20hearts.mp3?alt=media&token=8ffa55ef-0506-43fc-83d4-faeb83c77fb6",
+      image:
+        "https://i.pinimg.com/736x/8a/0f/d2/8a0fd28006965a14d47933dd6c23e294.jpg",
+    },
+    {
+      title: "Christina Perri - A Thousand Years",
+      artist: "Christina Perri",
+      album: "Pop antiguo",
+      url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FChristina%20Perri%20-%20A%20Thousand%20Years%20%5BOfficial%20Music%20Video%5D.mp3?alt=media&token=eb559b45-fd45-4860-94c4-97809ab24d36",
+      image:
+        "https://i.pinimg.com/736x/9c/4e/4c/9c4e4c896488c7d4b34b392f720203da.jpg",
     },
     {
       title: "Olivia Rodrig - drivers license",
@@ -2387,6 +2468,14 @@ const albums = {
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2F%E5%B9%BB%E6%98%BC%EF%BC%88%E9%92%A2%E7%90%B4%E7%89%88%EF%BC%89.mp3?alt=media&token=5492a28f-0967-4510-ac64-db51fcca5322",
       image: "https://i.scdn.co/image/ab67616d00001e029140b7b186f87f9f53c26379",
     },
+    {
+      title: "Ludovico Einaudi - Experience",
+      artist: "Ludovico Einaudi",
+      album: "Musica de fondo 3",
+      url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FLudovico%20Einaudi%20-%20Experience.mp3?alt=media&token=0dfae388-9728-4006-9f0d-8c775e7a58eb",
+      image:
+        "https://i.pinimg.com/736x/3f/a1/80/3fa180513080b7c020120e6c3c003376.jpg",
+    },
   ],
   //descarte
   Descartada: [
@@ -2433,6 +2522,14 @@ const albums = {
   // Lofi
   Lofi: [
     {
+      title: "Akon - lonely {slowed reverb}",
+      artist: "cup of coffee",
+      album: "Lofi",
+      url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2Flonely%20-%20%7Bslowed%20reverb%7D.mp3?alt=media&token=b2c4ca93-4505-48dc-864e-c9d9034b1a62",
+      image:
+        "https://i.pinimg.com/736x/00/e7/2f/00e72f80b3a593f1fd4da26ad564c585.jpg",
+    },
+    {
       title: "Oceans (Shalom Margaret Cover) - Lofi Remix",
       artist: "Shalommargaret",
       album: "Lofi",
@@ -2440,6 +2537,7 @@ const albums = {
       image:
         "https://ideogram.ai/assets/progressive-image/balanced/response/UNxlsUOdQ32hwvKi6M5wfQ",
     },
+
     {
       title: "Dido - Thank You (slowed) [Thunderstorm Remix]",
       artist: "Nedviel - Topic",
@@ -2913,11 +3011,18 @@ const albums = {
         "https://steamuserimages-a.akamaihd.net/ugc/918049876786709418/D8950977F24A3B7B5E05160C925D45486CF173A8/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
     },
     {
+      title: "Alan Walker - Spectre",
+      artist: "Alan Walker",
+      album: "Alan walker",
+      url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FAlan%20Walker%20-%20Spectre.mp3?alt=media&token=ee7aa68f-643c-462f-944b-5098cbbc17d4",
+      image:
+        "https://steamuserimages-a.akamaihd.net/ugc/918049876786709418/D8950977F24A3B7B5E05160C925D45486CF173A8/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+    },
+    {
       title: "End Of Time (VIZE Remix)",
       artist: "K-391, Alan Walker & Ahrix",
       album: "Alan walker",
       url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FK-391%2C%20Alan%20Walker%20%26%20Ahrix%20-%20End%20Of%20Time%20(VIZE%20Remix)%20-%20K-391.mp3?alt=media&token=be7f4006-2a61-4033-915d-a0851530f4fb",
-
       image:
         "https://i1.sndcdn.com/artworks-lk2zLl4v28UCP08p-qPgpZg-t500x500.jpg",
     },
@@ -3229,23 +3334,49 @@ const albums = {
         "https://e.snmc.io/i/1200/s/2e7709c7f1e2cbd51e0edd9f13fd9efe/4421576",
     },
   ],
+  Otros: [
+    {
+      title:
+        "In the House In a Heartbeat - John Murphy (28 Days Later Soundtrack) [Metal Cover]",
+      artist: "Remstage Music",
+      album: "Otros",
+      url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2FIn%20the%20House%20In%20a%20Heartbeat%20-%20John%20Murphy%20(28%20Days%20Later%20Soundtrack)%20%5BMetal%20Cover%5D%20(HQ).mp3?alt=media&token=a78a3d03-9849-4a7e-ac5c-a6c20212a0ed",
+      image:
+        "https://i.pinimg.com/736x/71/4c/3e/714c3e05e9e51b02ebcc7e96d2884040.jpg",
+    },
+    {
+      title: "deprezz - 28 Days Later (Slowed) (In The house In a Heartbeat)",
+      artist: "Deprezz",
+      album: "Otros",
+      url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2Fdeprezz%20-%2028%20Days%20Later%20(Slowed)%20(In%20The%20house%20In%20a%20Heartbeat).mp3?alt=media&token=e75883d7-6ef2-4462-bf84-e89eec5fde8f",
+      image:
+        "https://i.pinimg.com/736x/85/f2/54/85f254873a80da81216710f4dd99973c.jpg",
+    },
+    {
+      title: "In the house in a heartbeat x berserk",
+      artist: "Kylo",
+      album: "Otros",
+      url: "https://firebasestorage.googleapis.com/v0/b/hola-7d6f2.appspot.com/o/colega%2Fin%20the%20house%20in%20a%20heartbeat%20x%20berserk.mp3?alt=media&token=cc412dc9-70ca-41cd-8ef5-4da46cf840e5",
+      image:
+        "https://i.pinimg.com/736x/7c/6d/bc/7c6dbc3349cc86b2e2eeefa39e495896.jpg",
+    },
+  ],
 };
 
+//https://i.pinimg.com/736x/78/40/43/784043f360507cd8b647e173ed9a281c.jpg
+// https://i.pinimg.com/736x/eb/a3/7d/eba37d414c63c3f29ba60a149d74e5dc.jpg
 // https://i.pinimg.com/736x/d0/e7/2b/d0e72bc5dcb80e22296819364dff6b92.jpg
 // https://i.pinimg.com/736x/67/90/f6/6790f68e02e73ff981b9168c537090b3.jpg
 // https://i.pinimg.com/736x/00/8f/c2/008fc2b5fcf6953ff0b0fc0249d2990b.jpg
 // https://i.pinimg.com/736x/f5/ca/62/f5ca62e9cec5bbb11d6aaafd3c3ea37a.jpg
-//     "https://ideogram.ai/assets/image/lossless/response/Q2DtL1itQP2aruBLoP_yDQ",
 // https://i.pinimg.com/736x/c3/14/89/c314891466c820256099e5a30ba767d4.jpg
 // https://i.pinimg.com/736x/11/aa/4c/11aa4c7511a95f1d7da092b340ea32f6.jpg
 // https://i.pinimg.com/736x/a0/59/d7/a059d7366a48b6f4eceeee3c34b82049.jpg
 // https://i.pinimg.com/originals/df/af/58/dfaf5840703703a9f4ab4b6fc5de59fa.gif
-// https://i.pinimg.com/736x/9c/4e/4c/9c4e4c896488c7d4b34b392f720203da.jpg
-// https://i.pinimg.com/736x/bb/41/f7/bb41f7c39c240ecf95472413cd6de184.jpg
 // https://i.pinimg.com/736x/ef/be/5a/efbe5a6c6ccbbf6efbc4e9f8be4b1236.jpg
 // https://i.pinimg.com/736x/cc/97/56/cc975613079f3d445c06a94e7a3dc00d.jpg
 
 const musicas = {
-  musica_js: "musica js: V1.1.0",
+  musica_js: "musica js: V1.1.0.6",
 };
 console.log(musicas["musica_js"]);
