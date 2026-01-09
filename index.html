@@ -1,24 +1,653 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1"
-    />
-    <meta name="application-name" content="Hakari Music" />
-    <link
-      rel="shortcut icon"
-      href="https://cdn-icons-png.flaticon.com/512/1182/1182756.png"
-      as="style"
-    />
-    <title>Hakari</title>
-    <script src="musica.js"></script>
-  </head>
-  <body>
-    <h1>Music</h1>
+<!-- @format -->
 
-    <!-- Enlace para descargar el archivo JS -->
-    <a href="musica.js" download="musica.js">Descargar archivo JS</a>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title class="notranslate">ComponentBox</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="slider.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="shortcut icon" href="img.png" as="style" />
+
+</head>
+
+<body id="body">
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <div class="logo" onclick="scrollToSection('hero')">
+        <svg class="Logo" fill="#000000" height="54px" width="54px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <g>
+              <g>
+                <g>
+                  <path
+                    d="M411.546,92.369H100.453c-4.466,0-8.084,3.618-8.084,8.084v311.092c0,4.466,3.618,8.084,8.084,8.084h228.114 c4.466,0,8.084-3.619,8.084-8.084s-3.618-8.084-8.084-8.084h-220.03V108.538h294.924v294.924h-45.792 c-4.466,0-8.084,3.619-8.084,8.084s3.618,8.084,8.084,8.084h53.876c4.466,0,8.084-3.619,8.084-8.084V100.453 C419.63,95.989,416.011,92.369,411.546,92.369z">
+                  </path>
+                  <path
+                    d="M503.915,295.084c4.466,0,8.084-3.618,8.084-8.084c0-4.466-3.618-8.084-8.084-8.084h-46.557v-45.83h46.557 c4.466,0,8.084-3.618,8.084-8.084c0-4.466-3.618-8.084-8.084-8.084h-46.557v-45.832h46.556v0.001 c4.466,0,8.084-3.619,8.084-8.084c0-4.466-3.618-8.084-8.084-8.084h-46.557v-45.83h46.557c4.466,0,8.084-3.619,8.084-8.084 s-3.618-8.084-8.084-8.084h-46.563c-0.104-21.059-17.213-38.169-38.272-38.272V8.084c0-4.466-3.619-8.084-8.084-8.084 c-4.465,0-8.084,3.619-8.084,8.084v46.559h-45.829V8.084c0-4.466-3.62-8.084-8.084-8.084c-4.466,0-8.084,3.619-8.084,8.084 v46.559h-45.831V8.084c0-4.466-3.619-8.084-8.084-8.084s-8.084,3.619-8.084,8.084v46.559h-45.83V8.084 C233.084,3.619,229.466,0,225,0s-8.084,3.619-8.084,8.084v46.559h-45.83V8.084c0-4.466-3.619-8.084-8.084-8.084 s-8.084,3.619-8.084,8.084v46.559h-45.83V8.084c0-4.466-3.619-8.084-8.084-8.084s-8.084,3.619-8.084,8.084v46.564 c-21.06,0.102-38.17,17.213-38.273,38.272H8.085c-4.466,0-8.084,3.619-8.084,8.084s3.618,8.084,8.084,8.084h46.557v45.83H8.085 c-4.466,0-8.084,3.618-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084h46.557v45.832H8.085c-4.466,0-8.084,3.619-8.084,8.084 c0,4.466,3.618,8.084,8.084,8.084h46.557v45.83H8.085c-4.466,0-8.084,3.619-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084h46.557 v45.83H8.085c-4.466,0-8.084,3.619-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084h46.557v45.83H8.085 c-4.466,0-8.084,3.619-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084h46.563c0.103,21.06,17.214,38.169,38.273,38.272v46.562 c0,4.466,3.618,8.084,8.084,8.084c4.466,0,8.084-3.618,8.084-8.084v-46.559h45.83v46.559c0,4.466,3.618,8.084,8.084,8.084 c4.466,0,8.084-3.618,8.084-8.084v-46.559h45.83v46.559c0,4.466,3.618,8.084,8.084,8.084c4.466,0,8.084-3.618,8.084-8.084 v-46.559h45.83v46.559c0,4.466,3.618,8.084,8.084,8.084c4.466,0,8.084-3.618,8.084-8.084v-46.559h45.831v46.559 c0,4.466,3.619,8.084,8.084,8.084c4.465,0,8.084-3.618,8.084-8.084v-46.559h45.829v46.559c0,4.466,3.62,8.084,8.084,8.084 c4.466,0,8.084-3.618,8.084-8.084v-46.564c21.059-0.104,38.169-17.213,38.272-38.272h46.563c4.466,0,8.084-3.619,8.084-8.084 s-3.618-8.084-8.084-8.084h-46.557v-45.83h46.557c4.466,0,8.084-3.619,8.084-8.084s-3.618-8.084-8.084-8.084h-46.557v-45.829 H503.915z M418.889,441.189h-69.873c-0.006,0-0.012-0.001-0.018-0.001c-0.007,0-0.012,0.001-0.018,0.001h-61.963 c-0.007,0-0.012-0.001-0.018-0.001s-0.012,0.001-0.018,0.001h-61.962c-0.006,0-0.012-0.001-0.018-0.001s-0.012,0.001-0.018,0.001 h-61.962c-0.006,0-0.012-0.001-0.018-0.001s-0.012,0.001-0.018,0.001h-61.96c-0.006,0-0.012-0.001-0.018-0.001 c-0.006,0-0.012,0.001-0.018,0.001H93.11c-12.296,0-22.299-10.003-22.299-22.299V93.111c0-12.296,10.003-22.299,22.299-22.299 h7.874c0.008,0,0.014,0.001,0.02,0.001c0.006,0,0.014-0.001,0.021-0.001h61.956c0.008,0,0.014,0.001,0.021,0.001 c0.006,0,0.014-0.001,0.02-0.001h61.956c0.008,0,0.014,0.001,0.021,0.001s0.014-0.001,0.02-0.001h61.956 c0.008,0,0.014,0.001,0.021,0.001s0.014-0.001,0.021-0.001h61.957c0.008,0,0.014,0.001,0.021,0.001 c0.006,0,0.014-0.001,0.02-0.001h69.87c12.296,0,22.299,10.003,22.299,22.299v325.779h0.003 C441.188,431.185,431.185,441.189,418.889,441.189z">
+                  </path>
+                  <path
+                    d="M354.241,162.817c4.466,0,8.084-3.618,8.084-8.084c0-4.466-3.618-8.084-8.084-8.084h-4.654 c-4.466,0-8.084,3.618-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084H354.241z">
+                  </path>
+                  <path
+                    d="M322.099,146.649H157.758c-4.466,0-8.084,3.618-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084h164.341 c4.466,0,8.084-3.618,8.084-8.084C330.183,150.267,326.565,146.649,322.099,146.649z">
+                  </path>
+                  <path
+                    d="M354.241,232.161h-4.654c-4.466,0-8.084,3.618-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084h4.654 c4.466,0,8.084-3.618,8.084-8.084C362.325,235.78,358.706,232.161,354.241,232.161z">
+                  </path>
+                  <path
+                    d="M330.183,240.245c0-4.466-3.618-8.084-8.084-8.084H157.758c-4.466,0-8.084,3.618-8.084,8.084 c0,4.466,3.618,8.084,8.084,8.084h164.341C326.565,248.33,330.183,244.71,330.183,240.245z">
+                  </path>
+                  <path
+                    d="M157.758,205.574h4.654c4.466,0,8.084-3.618,8.084-8.084c0-4.466-3.618-8.084-8.084-8.084h-4.654 c-4.466,0-8.084,3.618-8.084,8.084C149.674,201.955,153.293,205.574,157.758,205.574z">
+                  </path>
+                  <path
+                    d="M181.815,197.49c0,4.466,3.619,8.084,8.084,8.084h164.341c4.466,0,8.084-3.618,8.084-8.084 c0-4.466-3.618-8.084-8.084-8.084H189.9C185.434,189.406,181.815,193.024,181.815,197.49z">
+                  </path>
+                  <path
+                    d="M157.758,314.637c-4.466,0-8.084,3.619-8.084,8.084s3.618,8.084,8.084,8.084h5.244c4.466,0,8.084-3.619,8.084-8.084 s-3.619-8.084-8.084-8.084H157.758z">
+                  </path>
+                  <path
+                    d="M196.615,314.637c-4.466,0-8.084,3.619-8.084,8.084s3.619,8.084,8.084,8.084h5.244c4.466,0,8.084-3.619,8.084-8.084 s-3.618-8.084-8.084-8.084H196.615z">
+                  </path>
+                  <path
+                    d="M235.473,314.637c-4.466,0-8.084,3.619-8.084,8.084s3.618,8.084,8.084,8.084h5.245c4.466,0,8.084-3.619,8.084-8.084 s-3.619-8.084-8.084-8.084H235.473z">
+                  </path>
+                  <path
+                    d="M362.325,344.332v-43.221c0-11.59-9.429-21.019-21.019-21.019h-43.221c-11.59,0-21.019,9.429-21.019,21.019v43.221 c0,11.59,9.429,21.019,21.019,21.019h43.221C352.896,365.351,362.325,355.922,362.325,344.332z M346.157,344.332 c0,2.674-2.175,4.851-4.851,4.851h-43.221c-2.674,0-4.851-2.176-4.851-4.851v-43.221c0-2.674,2.176-4.851,4.851-4.851h43.221 c2.675,0,4.851,2.176,4.851,4.851V344.332z">
+                  </path>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+        <span class="logo-text notranslate">ComponentBox</span>
+      </div>
+
+      <div class="nav-links" id="navLinks">
+        <button onclick="scrollToSection('features')" class="nav-link">Features</button>
+        <button onclick="scrollToSection('menu')" class="nav-link">Products</button>
+        <button onclick="scrollToSection('footer')" class="nav-link">Contact</button>
+      </div>
+
+      <div class="nav-actions">
+        <button class="btn" id="Login_Register" onclick="showLoginModal()">Login / Register</button>
+        <div onclick="goToDashboard()" id="Dashboard_Btn" style="display: none;;border-radius: 50%;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            id="user-outline-icon">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+
+        <button id="theme-toggle" aria-label="Cambiar tema">
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+
+        <div class="nav-action-item" style="position: relative;">
+          <button id="custom-translate-btn" class="theme-toggle" title="Traducir">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
+            </svg>
+          </button>
+
+          <div id="google_translate_element" style="display: none;"></div>
+
+          <div id="my-custom-menu" class="custom-menu-dropdown" style="display: none;">
+            <nav>
+              <ul>
+                <li class="lang-option" data-lang="en">English</li>
+                <li class="lang-option" data-lang="es">Spanish</li>
+                <li class="lang-option" data-lang="fr">French</li>
+                <li class="lang-option" data-lang="it">Italian</li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <button class="cart-btn" onclick="toggleCheckout()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1" />
+            <circle cx="19" cy="21" r="1" />
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+
+
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <button onclick="scrollToSection('features'); toggleMobileMenu()" class="mobile-link">Features</button>
+      <button onclick="scrollToSection('menu'); toggleMobileMenu()" class="mobile-link">Products</button>
+      <button onclick="scrollToSection('footer'); toggleMobileMenu()" class="mobile-link">Contact</button>
+      <button onclick="showLoginModal(); toggleMobileMenu()" class="mobile-link" id="Login_Register2">Login /
+        Register</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-background">
+      <img
+        src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxwYyUyMGNvbXBvbmVudHN8ZW58MHx8fHwxNzYzMDYzMDU2fDA&ixlib=rb-4.1.0&q=85"
+        alt="PC Components" />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+            stroke="currentColor" stroke-width="2">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>
+          <span>Rated #1 PC Components Store</span>
+        </div>
+
+        <h1 class="hero-title">
+          Premium PC Parts,<br />
+          <span class="text-primary">Built for Performance.</span>
+        </h1>
+
+        <p class="hero-description">Discover the best PC components from leading brands. High-quality parts, competitive
+          prices, and expert support to build your dream setup.</p>
+
+        <div class="hero-buttons">
+          <button class="btn btn-outline" onclick="scrollToSection('menu')">Browse Products</button>
+          <button class="btn btn-primary" onclick="scrollToSection('menu')">
+            Shop Now
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Products</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Support</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">10k+</div>
+            <div class="stat-label">Happy Builders</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <!-- stand out section -->
+  <section style="background: hsl(0deg 0% 26.27%); display: flex; /* width: 100%; */ justify-content: center">
+
+    <div class="carousel-container">
+      <!-- <marquee direction="right" scrollamount="2" loop="infinite"> -->
+      <h2 class="carousel-title ">Producs of Our sponsor; <span style="color: var(--span);">PcComponentes</span></h2>
+      <!-- </marquee> -->
+      <div class="carousel-slides">
+        <a href="https://www.pccomponentes.com/">
+          <div class="slide active">
+            <img src="https://img.evetech.co.za/repository/ProductImages/cpu-processors-online-banner-980px-v3.webp"
+              alt="Procesador Gaming" />
+          </div>
+          <div class="slide">
+            <img src="https://cdn.wccftech.com/wp-content/uploads/2018/11/89af6171f3914e9a9fbfb5cee56eb20e.png"
+              alt="Bosque panorámico" />
+          </div>
+          <div class="slide">
+            <img src="https://images.unsplash.com/photo-1600861194942-f883de0dfe96?w=1600&h=600&fit=crop"
+              alt="Motherboard Gaming">
+          </div>
+          <div class="slide">
+            <img
+              src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/c31a9ad1-cdee-4317-8936-f23daa9c1e2e.__CR0,0,970,300_PT0_SX970_V1___.jpg"
+              alt="Motherboard Gaming">
+          </div>
+          <div class="slide">
+            <img
+              src="https://www.cgdirector.com/wp-content/uploads/media/2023/05/DDR5-RAM-and-Ryzen-Buyer-Beware-Twitter.jpg"
+              alt="Puesta de sol" />
+          </div>
+          <div class="slide">
+            <img
+              src="https://mma.prnewswire.com/media/1499854/MSI_announced_a_commercial_promotion___To_Infinity_Beyond.jpg?p=twitter"
+              alt="PC Gaming Setup RGB" />
+          </div>
+        </a>
+      </div>
+
+      <button class="carousel-btn btn-prev" aria-label="Anterior">‹</button>
+      <button class="carousel-btn btn-next" aria-label="Siguiente">›</button>
+
+      <div class="carousel-indicators"></div>
+    </div>
+  </section>
+  <hr />
+  <!-- Menu Section -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our <span class="text-primary">Products</span></h2>
+        <p class="section-description">Discover our extensive selection of high-performance PC components.</p>
+      </div>
+      <!-- barra de busqueda -->
+      <div id="search_container">
+        <div class="search-wrapper">
+          <input type="text" id="searchInput" placeholder="Search products by name or description..."
+            oninput="searchProducts(this.value)" />
+          <div class="search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
+              <path
+                d="M 21 4 C 11.082241 4 3 12.082241 3 22 C 3 31.917759 11.082241 40 21 40 C 24.62177 40 27.99231 38.91393 30.820312 37.0625 L 43.378906 49.621094 L 47.621094 45.378906 L 35.224609 32.982422 C 37.581469 29.938384 39 26.13473 39 22 C 39 12.082241 30.917759 4 21 4 z M 21 8 C 28.756241 8 35 14.243759 35 22 C 35 29.756241 28.756241 36 21 36 C 13.243759 36 7 29.756241 7 22 C 7 14.243759 13.243759 8 21 8 z">
+              </path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!-- category-filters -->
+      <div style="display: flex; justify-content: center;">
+        <div class="category-filters" id="categoryFilters">
+          <button class="filter-btn active" onclick="filterMenu('All')">All</button>
+          <button class="filter-btn" onclick="filterMenu('GPU')">GPU</button>
+          <button class="filter-btn" onclick="filterMenu('CPU')">CPU</button>
+          <button class="filter-btn" onclick="filterMenu('RAM')">RAM</button>
+          <button class="filter-btn" onclick="filterMenu('Motherboard')">Motherboard</button>
+          <button class="filter-btn" onclick="filterMenu('Storage')">Storage</button>
+          <button class="filter-btn" onclick="filterMenu('Cooling')">Cooling</button>
+          <button class="filter-btn" onclick="filterOffers()">
+            <svg style="margin-right: 0.25rem; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="12"
+              height="12" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+              <polyline points="7.5 4.21 12 6.81 16.5 4.21" />
+              <polyline points="7.5 19.79 7.5 14.6 3 12" />
+              <polyline points="21 12 16.5 14.6 16.5 19.79" />
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+              <line x1="12" y1="22.08" x2="12" y2="12" />
+            </svg>
+            Offers
+          </button>
+          <button class="filter-btn" onclick="filterVip()" id="vip-filter" style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"
+              style="margin-right: 0.25rem;">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            VIP
+          </button>
+          <button class="filter-btn" onclick="filterPopular()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              style="margin-right: 0.25rem; vertical-align: middle">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            Popular
+          </button>
+        </div>
+      </div>
+      <div class="menu-grid" id="menuGrid"></div>
+    </div>
+    <div style="display: flex; justify-content: center;"><button class="btn" id="LoadMoreProducts"
+        onclick="LoadMoreProducts()">Show up more
+        pruducrts+</button></div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why Choose <span class="text-primary notranslate">ComponentBox</span></h2>
+        <p class="section-description">We're committed to providing the best PC building experience with quality parts,
+          expert advice, and outstanding service.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Authentic Products</h3>
+          <p class="feature-description">100% genuine components from authorized distributors with full manufacturer
+            warranty.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <rect x="1" y="3" width="15" height="13" />
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+              <circle cx="5.5" cy="18.5" r="2.5" />
+              <circle cx="18.5" cy="18.5" r="2.5" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Fast Shipping</h3>
+          <p class="feature-description">Quick delivery with careful packaging to ensure your components arrive safely.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Expert Support</h3>
+          <p class="feature-description">Our team of PC building experts is here to help with compatibility and
+            recommendations.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+              <line x1="12" y1="17" x2="12.01" y2="17" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Price Match</h3>
+          <p class="feature-description">We match competitor prices to ensure you get the best deal on premium
+            components.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <div class="footer-logo">
+            <div class="logo-icon">
+              <svg fill="#ccc" class="Logo" height="54px" width="54px" version="1.1" id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"
+                xml:space="preserve">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <g>
+                      <g>
+                        <path
+                          d="M411.546,92.369H100.453c-4.466,0-8.084,3.618-8.084,8.084v311.092c0,4.466,3.618,8.084,8.084,8.084h228.114 c4.466,0,8.084-3.619,8.084-8.084s-3.618-8.084-8.084-8.084h-220.03V108.538h294.924v294.924h-45.792 c-4.466,0-8.084,3.619-8.084,8.084s3.618,8.084,8.084,8.084h53.876c4.466,0,8.084-3.619,8.084-8.084V100.453 C419.63,95.989,416.011,92.369,411.546,92.369z">
+                        </path>
+                        <path
+                          d="M503.915,295.084c4.466,0,8.084-3.618,8.084-8.084c0-4.466-3.618-8.084-8.084-8.084h-46.557v-45.83h46.557 c4.466,0,8.084-3.618,8.084-8.084c0-4.466-3.618-8.084-8.084-8.084h-46.557v-45.832h46.556v0.001 c4.466,0,8.084-3.619,8.084-8.084c0-4.466-3.618-8.084-8.084-8.084h-46.557v-45.83h46.557c4.466,0,8.084-3.619,8.084-8.084 s-3.618-8.084-8.084-8.084h-46.563c-0.104-21.059-17.213-38.169-38.272-38.272V8.084c0-4.466-3.619-8.084-8.084-8.084 c-4.465,0-8.084,3.619-8.084,8.084v46.559h-45.829V8.084c0-4.466-3.62-8.084-8.084-8.084c-4.466,0-8.084,3.619-8.084,8.084 v46.559h-45.831V8.084c0-4.466-3.619-8.084-8.084-8.084s-8.084,3.619-8.084,8.084v46.559h-45.83V8.084 C233.084,3.619,229.466,0,225,0s-8.084,3.619-8.084,8.084v46.559h-45.83V8.084c0-4.466-3.619-8.084-8.084-8.084 s-8.084,3.619-8.084,8.084v46.559h-45.83V8.084c0-4.466-3.619-8.084-8.084-8.084s-8.084,3.619-8.084,8.084v46.564 c-21.06,0.102-38.17,17.213-38.273,38.272H8.085c-4.466,0-8.084,3.619-8.084,8.084s3.618,8.084,8.084,8.084h46.557v45.83H8.085 c-4.466,0-8.084,3.618-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084h46.557v45.832H8.085c-4.466,0-8.084,3.619-8.084,8.084 c0,4.466,3.618,8.084,8.084,8.084h46.557v45.83H8.085c-4.466,0-8.084,3.619-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084h46.557 v45.83H8.085c-4.466,0-8.084,3.619-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084h46.557v45.83H8.085 c-4.466,0-8.084,3.619-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084h46.563c0.103,21.06,17.214,38.169,38.273,38.272v46.562 c0,4.466,3.618,8.084,8.084,8.084c4.466,0,8.084-3.618,8.084-8.084v-46.559h45.83v46.559c0,4.466,3.618,8.084,8.084,8.084 c4.466,0,8.084-3.618,8.084-8.084v-46.559h45.83v46.559c0,4.466,3.618,8.084,8.084,8.084c4.466,0,8.084-3.618,8.084-8.084 v-46.559h45.83v46.559c0,4.466,3.618,8.084,8.084,8.084c4.466,0,8.084-3.618,8.084-8.084v-46.559h45.831v46.559 c0,4.466,3.619,8.084,8.084,8.084c4.465,0,8.084-3.618,8.084-8.084v-46.559h45.829v46.559c0,4.466,3.62,8.084,8.084,8.084 c4.466,0,8.084-3.618,8.084-8.084v-46.564c21.059-0.104,38.169-17.213,38.272-38.272h46.563c4.466,0,8.084-3.619,8.084-8.084 s-3.618-8.084-8.084-8.084h-46.557v-45.83h46.557c4.466,0,8.084-3.619,8.084-8.084s-3.618-8.084-8.084-8.084h-46.557v-45.829 H503.915z M418.889,441.189h-69.873c-0.006,0-0.012-0.001-0.018-0.001c-0.007,0-0.012,0.001-0.018,0.001h-61.963 c-0.007,0-0.012-0.001-0.018-0.001s-0.012,0.001-0.018,0.001h-61.962c-0.006,0-0.012-0.001-0.018-0.001s-0.012,0.001-0.018,0.001 h-61.962c-0.006,0-0.012-0.001-0.018-0.001s-0.012,0.001-0.018,0.001h-61.96c-0.006,0-0.012-0.001-0.018-0.001 c-0.006,0-0.012,0.001-0.018,0.001H93.11c-12.296,0-22.299-10.003-22.299-22.299V93.111c0-12.296,10.003-22.299,22.299-22.299 h7.874c0.008,0,0.014,0.001,0.02,0.001c0.006,0,0.014-0.001,0.021-0.001h61.956c0.008,0,0.014,0.001,0.021,0.001 c0.006,0,0.014-0.001,0.02-0.001h61.956c0.008,0,0.014,0.001,0.021,0.001s0.014-0.001,0.02-0.001h61.956 c0.008,0,0.014,0.001,0.021,0.001s0.014-0.001,0.021-0.001h61.957c0.008,0,0.014,0.001,0.021,0.001 c0.006,0,0.014-0.001,0.02-0.001h69.87c12.296,0,22.299,10.003,22.299,22.299v325.779h0.003 C441.188,431.185,431.185,441.189,418.889,441.189z">
+                        </path>
+                        <path
+                          d="M354.241,162.817c4.466,0,8.084-3.618,8.084-8.084c0-4.466-3.618-8.084-8.084-8.084h-4.654 c-4.466,0-8.084,3.618-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084H354.241z">
+                        </path>
+                        <path
+                          d="M322.099,146.649H157.758c-4.466,0-8.084,3.618-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084h164.341 c4.466,0,8.084-3.618,8.084-8.084C330.183,150.267,326.565,146.649,322.099,146.649z">
+                        </path>
+                        <path
+                          d="M354.241,232.161h-4.654c-4.466,0-8.084,3.618-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084h4.654 c4.466,0,8.084-3.618,8.084-8.084C362.325,235.78,358.706,232.161,354.241,232.161z">
+                        </path>
+                        <path
+                          d="M330.183,240.245c0-4.466-3.618-8.084-8.084-8.084H157.758c-4.466,0-8.084,3.618-8.084,8.084 c0,4.466,3.618,8.084,8.084,8.084h164.341C326.565,248.33,330.183,244.71,330.183,240.245z">
+                        </path>
+                        <path
+                          d="M157.758,205.574h4.654c4.466,0,8.084-3.618,8.084-8.084c0-4.466-3.618-8.084-8.084-8.084h-4.654 c-4.466,0-8.084,3.618-8.084,8.084C149.674,201.955,153.293,205.574,157.758,205.574z">
+                        </path>
+                        <path
+                          d="M181.815,197.49c0,4.466,3.619,8.084,8.084,8.084h164.341c4.466,0,8.084-3.618,8.084-8.084 c0-4.466-3.618-8.084-8.084-8.084H189.9C185.434,189.406,181.815,193.024,181.815,197.49z">
+                        </path>
+                        <path
+                          d="M157.758,314.637c-4.466,0-8.084,3.619-8.084,8.084s3.618,8.084,8.084,8.084h5.244c4.466,0,8.084-3.619,8.084-8.084 s-3.619-8.084-8.084-8.084H157.758z">
+                        </path>
+                        <path
+                          d="M196.615,314.637c-4.466,0-8.084,3.619-8.084,8.084s3.619,8.084,8.084,8.084h5.244c4.466,0,8.084-3.619,8.084-8.084 s-3.618-8.084-8.084-8.084H196.615z">
+                        </path>
+                        <path
+                          d="M235.473,314.637c-4.466,0-8.084,3.619-8.084,8.084s3.618,8.084,8.084,8.084h5.245c4.466,0,8.084-3.619,8.084-8.084 s-3.619-8.084-8.084-8.084H235.473z">
+                        </path>
+                        <path
+                          d="M362.325,344.332v-43.221c0-11.59-9.429-21.019-21.019-21.019h-43.221c-11.59,0-21.019,9.429-21.019,21.019v43.221 c0,11.59,9.429,21.019,21.019,21.019h43.221C352.896,365.351,362.325,355.922,362.325,344.332z M346.157,344.332 c0,2.674-2.175,4.851-4.851,4.851h-43.221c-2.674,0-4.851-2.176-4.851-4.851v-43.221c0-2.674,2.176-4.851,4.851-4.851h43.221 c2.675,0,4.851,2.176,4.851,4.851V344.332z">
+                        </path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <span class="logo-text notranslate">ComponentBox</span>
+          </div>
+          <p class="footer-description">Building dreams, one component at a time. Premium PC parts and expert guidance
+            for your perfect setup.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/1JTCoCcVes/" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/ebriel_2005?igsh=MWwzM2ZpNmExaHNueA==" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+              </svg>
+            </a>
+            <a href="https://share.google/PQ7LUcYJyRyEPem8o" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="./footer/About Us.html">About Us</a></li>
+            <li><a href="./footer/Developers and support team.html">Talk to Developers team</a></li>
+            <li><a href="./footer/ask/Partner.html">Become a Partner</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-heading">Support</h3>
+          <ul class="footer-links">
+            <li><a href="./footer/HelpCenter and FAQs.html">Help Center & FAQs</a></li>
+            <li><a href="./footer/ask/support team.html">Talk to support team</a></li>
+            <li><a href="./footer/Terms of Service.html">Terms of Service</a></li>
+            <li><a href="./footer/Privacy Policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-heading">Contact Us</h3>
+          <ul class="footer-contact">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Av Dr. Pedro A. Columna. street Alborada. (Bonao)</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>+1 (829) 767-1171</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>ComponentBox@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="notranslate">&copy; 2025-2026 ComponentBox. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Product Detail Panel -->
+  <div id="productPanel" class="panel-overlay" onclick="closeProductPanel()">
+    <div class="panel" onclick="event.stopPropagation()">
+      <button style="top: 0.5rem; right: 0.75rem;" class="panel-close" id="panel-close" onclick="closeProductPanel()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <div id="productPanelContent"></div>
+    </div>
+  </div>
+
+  <!-- Checkout Panel -->
+  <div id="checkoutPanel" class="panel-overlay" onclick="closeCheckout()">
+    <div class="panel checkout-panel" onclick="event.stopPropagation()">
+      <div class="panel-header">
+        <div class="panel-header-content">
+          <div class="panel-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <circle cx="8" cy="21" r="1" />
+              <circle cx="19" cy="21" r="1" />
+              <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+            </svg>
+          </div>
+          <h2>Checkout</h2>
+        </div>
+        <button class="panel-close" onclick="closeCheckout()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <div id="checkoutContent" class="panel-content"></div>
+    </div>
+  </div>
+
+  <div id="ratingModal" class="modal-overlay">
+    <div class="rating-card">
+      <span class="close-btn" onclick="toggleRatingModal(false)">X</span>
+
+      <h2>¿Qué te pareció el producto?</h2>
+
+      <div class="rating-group">
+        <input type="radio" id="star5" name="rating" value="5">
+        <label for="star5">★</label>
+        <input type="radio" id="star4" name="rating" value="4">
+        <label for="star4">★</label>
+        <input type="radio" id="star3" name="rating" value="3">
+        <label for="star3">★</label>
+        <input type="radio" id="star2" name="rating" value="2">
+        <label for="star2">★</label>
+        <input type="radio" id="star1" name="rating" value="1">
+        <label for="star1">★</label>
+      </div>
+
+      <button class="btn-submit" onclick="enviarCalificacion()">Enviar Reseña</button>
+    </div>
+  </div>
+
+  <!-- Toast Notification. don't toch-->
+  <div id="toast-container"></div>
+  <!-- scripts -->
+  <script defer type="module" src="database(api_connection).js"></script>
+  <script defer src="slider.js"></script>
+  <script defer src="Products.js"></script>
+  <script defer src="script.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+
+
+  <script defer type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- notes -->
+  <script>
+
+    const notes = {
+      version: "Web: v1.1",
+      version_DataBase: "Js: v1.2",
+      build: "Build: 08-01-2026",
+      fecha: "Creacion: 12-12-2025",
+      by: "By: Colega/Wilson(Wander)",
+    };
+
+    console.log(notes["version"]);
+    console.log(notes["version_DataBase"]);
+    console.log(notes["build"]);
+    console.log(notes["fecha"]);
+    console.log(notes["by"]);
+  </script>
+</body>
+
 </html>

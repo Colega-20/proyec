@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk to Developers team - Politécnico</title>
+    <link rel="shortcut icon" href="img.png" as="style" />
+    <style>
+        /* ========================================= 
+               PALETA DE COLORES Y VARIABLES (DINÁMICAS)
+               ========================================= */
+        :root {
+            /* MODO OSCURO (Default) */
+            --bg-primary: #050913;
+            --bg-secondary: #0d111a;
+            --bg-tertiary: #151821;
+            --bg-dark-gray: #282d37;
+            --bg-deep: #0a192f;
+            --bg-card: #112240a1;
+            --theme-first-color: #64ffda;
+            --theme-second-color: #00A2FF;
+            --accent-cyan: #64ffda;
+            --text-primary: #ccd6f6;
+            --text-secondary: #8892b0;
+            --border-color: #233554;
+            --foreground: hsl(210, 40%, 98%);
+            --background: hsl(222, 47%, 11%);
+            --primary: hsl(168, 62%, 46%);
+            --shadow-lg: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .light-theme {
+            /* MODO CLARO */
+            --bg-primary: #f1f5f9;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #e2e8f0;
+            --bg-dark-gray: #cbd5e1;
+            --shadow-lg: 0 1px 3px rgb(0 0 0 / 19%);
+            --bg-deep: #e3e3e3;
+            --bg-card: rgba(255, 255, 255, 0.637);
+            --theme-first-color: #0d9488;
+            --theme-second-color: #0284c7;
+            --accent-cyan: #0d9488;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --border-color: #d1d5db;
+            --background: #f8fafc;
+            --primary: #0d9488;
+            --foreground: hsl(222, 47%, 11%);
+        }
+
+        /* ========================================= 
+               SCROLLBAR (Con variables dinámicas)
+               ========================================= */
+        *::-webkit-scrollbar-track {
+            background-color: var(--background);
+            margin-block: 0;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            /* Gradiente Turquesa */
+            background: linear-gradient(140deg, var(--primary) 0%, hsl(190, 80%, 40%) 100%);
+            border: 3px solid rgba(0, 0, 0, 0);
+            border-radius: 2%;
+            background-clip: padding-box;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        *::-webkit-scrollbar {
+            width: 10px;
+            background-color: transparent;
+        }
+
+        ::selection {
+            background-color: var(--theme-second-color);
+            color: var(--bg-deep);
+        }
+
+        /* Oculta la barra de Google y resetea el posicionamiento del body */
+        .goog-te-banner-frame,
+        .goog-te-balloon-frame,
+        #goog-gt-tt,
+        .goog-tooltip,
+        .goog-tooltip:hover {
+            display: none !important;
+        }
+
+        body {
+            top: 0 !important;
+        }
+
+        font {
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+
+        .skiptranslate iframe {
+            display: none;
+        }
+
+        /* ========================================= 
+               ESTILOS BASE
+               ========================================= */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Inter", "Segoe UI", sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+            fill: var(--accent-cyan);
+        }
+
+        /* ========================================= 
+               HEADER
+               ========================================= */
+        header {
+            background: var(--bg-card);
+            color: var(--accent-cyan);
+            padding: 60px 20px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+
+        /* ========================================= 
+               NAVEGACIÓN
+               ========================================= */
+        nav {
+
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            display: flex;
+            gap: 20px;
+            /* padding: 15px 0; */
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 4px 1.5rem;
+            box-shadow: var(--shadow-lg);
+            transition: background 0.3s ease;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+
+        }
+
+        nav a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.5rem;
+            padding: 10px 18px;
+            border-radius: 4px;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        nav a:hover {
+            color: var(--accent-cyan);
+
+
+        }
+
+
+        /* ========================================= 
+               CONTENIDO Y CARDS
+               ========================================= */
+        .contenido {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            padding: 25px;
+            box-shadow: var(--shadow-lg);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateX(10px);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
+        }
+
+        .light-theme .card:hover {
+            box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: var(--accent-cyan);
+            letter-spacing: 1px;
+        }
+
+        .dato {
+            margin: 10px 0;
+            color: var(--text-secondary);
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Indicador decorativo */
+        .dato::before {
+            content: "▹";
+            color: var(--accent-cyan);
+            font-weight: bold;
+            display: flex;
+            gap: 10px;
+        }
+
+        /* ========================================= 
+               BOTONES DE ACCIÓN
+               ========================================= */
+        .action-btn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+
+        .btn-email {
+            background: rgba(100, 255, 218, 0.1);
+            color: var(--accent-cyan);
+            margin-bottom: 4%;
+            border: 1px solid var(--accent-cyan);
+        }
+
+        .btn-email:hover {
+            background: var(--accent-cyan);
+            color: var(--bg-deep);
+        }
+
+        .light-theme .btn-email {
+            background: rgba(13, 148, 136, 0.1);
+        }
+
+        .light-theme .btn-email:hover {
+            color: #ffffff;
+        }
+
+        .btn-tel {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-tel:hover {
+            border-color: var(--text-primary);
+            background: rgba(204, 214, 246, 0.1);
+        }
+
+        .light-theme .btn-tel:hover {
+            background: rgba(15, 23, 42, 0.05);
+        }
+
+        /* ========================================= 
+               BOTÓN FLOTANTE (FAB)
+               ========================================= */
+        .floating-home {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .floating-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(100, 255, 218, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 15px rgba(100, 255, 218, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .light-theme .floating-btn {
+            background: rgba(13, 148, 136, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 0 15px rgba(13, 148, 136, 0.2);
+        }
+
+        .floating-text {
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        .floating-btn:hover {
+            background: var(--accent-cyan);
+            color: var(--bg-deep);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 12px 40px rgba(100, 255, 218, 0.4);
+        }
+
+        .light-theme .floating-btn:hover {
+            color: #ffffff;
+            box-shadow: 0 12px 40px rgba(13, 148, 136, 0.3);
+        }
+
+        #theme-toggle {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 8px 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        #theme-toggle:hover {
+            transform: translateY(-2px);
+            transition: all 0.3s;
+            background: rgba(100, 255, 218, 0.1);
+        }
+
+        /* Ocultar un icono según el modo activo */
+        .sun-icon {
+            display: none;
+        }
+
+        .moon-icon {
+            display: block;
+        }
+
+        .light-theme .sun-icon {
+            display: block;
+        }
+
+        .light-theme .moon-icon {
+            display: none;
+        }
+
+        /* ========================================= 
+               RESPONSIVE
+               ========================================= */
+        @media (max-width: 600px) {
+            .contenido {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-group {
+                flex-direction: column;
+            }
+
+            nav {
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+
+            header {
+                font-size: 24px;
+                padding: 40px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav>
+        <a href="../index.html" class="logo">
+            <svg class="logo" id="logo" fill="#ccc" height="54px" width="54px" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"
+                xml:space="preserve">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <g>
+                        <g>
+                            <g>
+                                <path
+                                    d="M411.546,92.369H100.453c-4.466,0-8.084,3.618-8.084,8.084v311.092c0,4.466,3.618,8.084,8.084,8.084h228.114 c4.466,0,8.084-3.619,8.084-8.084s-3.618-8.084-8.084-8.084h-220.03V108.538h294.924v294.924h-45.792 c-4.466,0-8.084,3.619-8.084,8.084s3.618,8.084,8.084,8.084h53.876c4.466,0,8.084-3.619,8.084-8.084V100.453 C419.63,95.989,416.011,92.369,411.546,92.369z">
+                                </path>
+                                <path
+                                    d="M503.915,295.084c4.466,0,8.084-3.618,8.084-8.084c0-4.466-3.618-8.084-8.084-8.084h-46.557v-45.83h46.557 c4.466,0,8.084-3.618,8.084-8.084c0-4.466-3.618-8.084-8.084-8.084h-46.557v-45.832h46.556v0.001 c4.466,0,8.084-3.619,8.084-8.084c0-4.466-3.618-8.084-8.084-8.084h-46.557v-45.83h46.557c4.466,0,8.084-3.619,8.084-8.084 s-3.618-8.084-8.084-8.084h-46.563c-0.104-21.059-17.213-38.169-38.272-38.272V8.084c0-4.466-3.619-8.084-8.084-8.084 c-4.465,0-8.084,3.619-8.084,8.084v46.559h-45.829V8.084c0-4.466-3.62-8.084-8.084-8.084c-4.466,0-8.084,3.619-8.084,8.084 v46.559h-45.831V8.084c0-4.466-3.619-8.084-8.084-8.084s-8.084,3.619-8.084,8.084v46.559h-45.83V8.084 C233.084,3.619,229.466,0,225,0s-8.084,3.619-8.084,8.084v46.559h-45.83V8.084c0-4.466-3.619-8.084-8.084-8.084 s-8.084,3.619-8.084,8.084v46.559h-45.83V8.084c0-4.466-3.619-8.084-8.084-8.084s-8.084,3.619-8.084,8.084v46.564 c-21.06,0.102-38.17,17.213-38.273,38.272H8.085c-4.466,0-8.084,3.619-8.084,8.084s3.618,8.084,8.084,8.084h46.557v45.83H8.085 c-4.466,0-8.084,3.618-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084h46.557v45.832H8.085c-4.466,0-8.084,3.619-8.084,8.084 c0,4.466,3.618,8.084,8.084,8.084h46.557v45.83H8.085c-4.466,0-8.084,3.619-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084h46.557 v45.83H8.085c-4.466,0-8.084,3.619-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084h46.557v45.83H8.085 c-4.466,0-8.084,3.619-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084h46.563c0.103,21.06,17.214,38.169,38.273,38.272v46.562 c0,4.466,3.618,8.084,8.084,8.084c4.466,0,8.084-3.618,8.084-8.084v-46.559h45.83v46.559c0,4.466,3.618,8.084,8.084,8.084 c4.466,0,8.084-3.618,8.084-8.084v-46.559h45.83v46.559c0,4.466,3.618,8.084,8.084,8.084c4.466,0,8.084-3.618,8.084-8.084 v-46.559h45.83v46.559c0,4.466,3.618,8.084,8.084,8.084c4.466,0,8.084-3.618,8.084-8.084v-46.559h45.831v46.559 c0,4.466,3.619,8.084,8.084,8.084c4.465,0,8.084-3.618,8.084-8.084v-46.559h45.829v46.559c0,4.466,3.62,8.084,8.084,8.084 c4.466,0,8.084-3.618,8.084-8.084v-46.564c21.059-0.104,38.169-17.213,38.272-38.272h46.563c4.466,0,8.084-3.619,8.084-8.084 s-3.618-8.084-8.084-8.084h-46.557v-45.83h46.557c4.466,0,8.084-3.619,8.084-8.084s-3.618-8.084-8.084-8.084h-46.557v-45.829 H503.915z M418.889,441.189h-69.873c-0.006,0-0.012-0.001-0.018-0.001c-0.007,0-0.012,0.001-0.018,0.001h-61.963 c-0.007,0-0.012-0.001-0.018-0.001s-0.012,0.001-0.018,0.001h-61.962c-0.006,0-0.012-0.001-0.018-0.001s-0.012,0.001-0.018,0.001 h-61.962c-0.006,0-0.012-0.001-0.018-0.001s-0.012,0.001-0.018,0.001h-61.96c-0.006,0-0.012-0.001-0.018-0.001 c-0.006,0-0.012,0.001-0.018,0.001H93.11c-12.296,0-22.299-10.003-22.299-22.299V93.111c0-12.296,10.003-22.299,22.299-22.299 h7.874c0.008,0,0.014,0.001,0.02,0.001c0.006,0,0.014-0.001,0.021-0.001h61.956c0.008,0,0.014,0.001,0.021,0.001 c0.006,0,0.014-0.001,0.02-0.001h61.956c0.008,0,0.014,0.001,0.021,0.001s0.014-0.001,0.02-0.001h61.956 c0.008,0,0.014,0.001,0.021,0.001s0.014-0.001,0.021-0.001h61.957c0.008,0,0.014,0.001,0.021,0.001 c0.006,0,0.014-0.001,0.02-0.001h69.87c12.296,0,22.299,10.003,22.299,22.299v325.779h0.003 C441.188,431.185,431.185,441.189,418.889,441.189z">
+                                </path>
+                                <path
+                                    d="M354.241,162.817c4.466,0,8.084-3.618,8.084-8.084c0-4.466-3.618-8.084-8.084-8.084h-4.654 c-4.466,0-8.084,3.618-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084H354.241z">
+                                </path>
+                                <path
+                                    d="M322.099,146.649H157.758c-4.466,0-8.084,3.618-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084h164.341 c4.466,0,8.084-3.618,8.084-8.084C330.183,150.267,326.565,146.649,322.099,146.649z">
+                                </path>
+                                <path
+                                    d="M354.241,232.161h-4.654c-4.466,0-8.084,3.618-8.084,8.084c0,4.466,3.618,8.084,8.084,8.084h4.654 c4.466,0,8.084-3.618,8.084-8.084C362.325,235.78,358.706,232.161,354.241,232.161z">
+                                </path>
+                                <path
+                                    d="M330.183,240.245c0-4.466-3.618-8.084-8.084-8.084H157.758c-4.466,0-8.084,3.618-8.084,8.084 c0,4.466,3.618,8.084,8.084,8.084h164.341C326.565,248.33,330.183,244.71,330.183,240.245z">
+                                </path>
+                                <path
+                                    d="M157.758,205.574h4.654c4.466,0,8.084-3.618,8.084-8.084c0-4.466-3.618-8.084-8.084-8.084h-4.654 c-4.466,0-8.084,3.618-8.084,8.084C149.674,201.955,153.293,205.574,157.758,205.574z">
+                                </path>
+                                <path
+                                    d="M181.815,197.49c0,4.466,3.619,8.084,8.084,8.084h164.341c4.466,0,8.084-3.618,8.084-8.084 c0-4.466-3.618-8.084-8.084-8.084H189.9C185.434,189.406,181.815,193.024,181.815,197.49z">
+                                </path>
+                                <path
+                                    d="M157.758,314.637c-4.466,0-8.084,3.619-8.084,8.084s3.618,8.084,8.084,8.084h5.244c4.466,0,8.084-3.619,8.084-8.084 s-3.619-8.084-8.084-8.084H157.758z">
+                                </path>
+                                <path
+                                    d="M196.615,314.637c-4.466,0-8.084,3.619-8.084,8.084s3.619,8.084,8.084,8.084h5.244c4.466,0,8.084-3.619,8.084-8.084 s-3.618-8.084-8.084-8.084H196.615z">
+                                </path>
+                                <path
+                                    d="M235.473,314.637c-4.466,0-8.084,3.619-8.084,8.084s3.618,8.084,8.084,8.084h5.245c4.466,0,8.084-3.619,8.084-8.084 s-3.619-8.084-8.084-8.084H235.473z">
+                                </path>
+                                <path
+                                    d="M362.325,344.332v-43.221c0-11.59-9.429-21.019-21.019-21.019h-43.221c-11.59,0-21.019,9.429-21.019,21.019v43.221 c0,11.59,9.429,21.019,21.019,21.019h43.221C352.896,365.351,362.325,355.922,362.325,344.332z M346.157,344.332 c0,2.674-2.175,4.851-4.851,4.851h-43.221c-2.674,0-4.851-2.176-4.851-4.851v-43.221c0-2.674,2.176-4.851,4.851-4.851h43.221 c2.675,0,4.851,2.176,4.851,4.851V344.332z">
+                                </path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <span class="logo-text notranslate">ComponentBox</span>
+        </a>
+        <button id="theme-toggle" aria-label="Cambiar tema">
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+        </button>
+    </nav>
+    <header>
+        Developers team - Politécnico
+    </header>
+
+
+    <section class="contenido">
+
+        <div class="card">
+            <h2>Jhon Maikol</h2>
+            <p class="dato">Correo: jhonmaikol@pfb.edu.do</p>
+            <p class="dato">Teléfono: 809-555-1001</p>
+            <div class="btn-group">
+                <a href="mailto:melissa@pfb.edu.do" class="action-btn btn-email">
+                    ✉ Correo
+                </a>
+                <a href="tel:8095551004" class="action-btn btn-tel">
+                    📞 Llamar
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Wander</h2>
+            <p class="dato">Correo: wander@pfb.edu.do</p>
+            <p class="dato">Teléfono: 809-555-1002</p>
+            <div class="btn-group">
+                <a href="mailto:melissa@pfb.edu.do" class="action-btn btn-email">
+                    ✉ Correo
+                </a>
+                <a href="tel:8095551004" class="action-btn btn-tel">
+                    📞 Llamar
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Edisson</h2>
+            <p class="dato">Correo: edisson@pfb.edu.do</p>
+            <p class="dato">Teléfono: 8297671171</p>
+            <div class="btn-group">
+                <a href="mailto:delossantosedisson@gmail.com" class="action-btn btn-email">
+                    ✉ Correo
+                </a>
+                <a href="tel:8297671171" class="action-btn btn-tel">
+                    📞 Llamar
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Melani</h2>
+            <p class="dato">Correo: melani@pfb.edu.do</p>
+            <p class="dato">Teléfono: 809-555-1003</p>
+            <div class="btn-group">
+                <a href="mailto:melissa@pfb.edu.do" class="action-btn btn-email">
+                    ✉ Correo
+                </a>
+                <a href="tel:8095551004" class="action-btn btn-tel">
+                    📞 Llamar
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Melissa</h2>
+            <p class="dato">Correo: melissa@pfb.edu.do</p>
+            <p class="dato">Teléfono: 809-555-1004</p>
+            <div class="btn-group">
+                <a href="mailto:melissa@pfb.edu.do" class="action-btn btn-email">
+                    ✉ Correo
+                </a>
+                <a href="tel:8095551004" class="action-btn btn-tel">
+                    📞 Llamar
+                </a>
+            </div>
+        </div>
+
+    </section>
+    <div class="floating-home">
+        <a href="../user/user.html" class="floating-btn" title="Regresar al Inicio">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span class="floating-text">Home</span>
+        </a>
+    </div>
+
+    <script type="module" src="script.js"></script>
+    <div id="google_translate_element" style="display:none;"></div>
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,es,fr,it',
+                autoDisplay: true,
+                multilanguagePage: true,
+            }, 'google_translate_element');
+        }
+
+        // Este código revisa si la cookie existe y fuerza el hash en la URL si no está presente
+        (function checkLangCookie() {
+            const match = document.cookie.match(new RegExp('(^| )googtrans=([^;]+)'));
+            if (match) {
+                const langValue = match[2];
+                if (!window.location.hash.includes('#googtrans')) {
+                    window.location.hash = `#googtrans(${langValue})`;
+                }
+            }
+        })();
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>
